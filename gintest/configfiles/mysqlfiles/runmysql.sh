@@ -1,6 +1,6 @@
 #!/bin/bash
 
-instances=$(docker ps -a | grep -i up | awk '{print $1}') # debug part
+# instances=$(docker ps -a | grep -i up | awk '{print $1}') # debug part
 instances=$(docker ps -a | grep -i exited | awk '{print $1}')
 # tr命令把输出中的换行符替换为空
 instances=$(echo "$instances" | tr '\n' ' ')
